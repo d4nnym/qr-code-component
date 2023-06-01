@@ -1,0 +1,29 @@
+$light-blue: #708EC0
+$dark-blue: #4A5E80
+
+$size-0-1:.25rem // 4px
+$size-0: 1rem // 16 px
+
+$mobile:512px
+
+$anchor-hover: $dark-blue
+.signature
+  display: flex
+  align-items: center
+  position: absolute
+  margin: $size-0 
+  bottom: 0
+  color: $light-blue
+  > *,.icons > *
+    margin: $size-0-1
+  a
+    border-radius: 50%
+    &:visited
+      color: inherit
+    &:hover
+      color:$anchor-hover
+
+@media (max-width:$mobile)
+  .signature
+    justify-content: center
+    flex-flow: column

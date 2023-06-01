@@ -1,0 +1,120 @@
+/*****************************/
+/*          imports          */
+/*****************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap")
+
+
+/*****************************/
+/*          resets           */
+/*****************************/
+
+:root, body 
+  box-sizing: border-box
+  font-size: 100%
+  font-weight: normal
+  font-family: 'Outfit', sans-serif
+
+*
+  &,
+  &::after,
+  &::before
+    box-sizing: inherit
+    padding:0
+    margin:0
+    border:0
+    position: static
+
+h1, h2, h3, h4, h5, h6
+  font-size: 100%
+  font-weight: normal
+
+a
+  text-decoration: none
+  &:visited
+    text-decoration: none
+     
+
+/*****************************/
+/*        Media Queries      */
+/*****************************/
+
+$mobile: 375px
+$desktop: 1440px
+
+/*****************************/
+/*        Colors             */
+/*****************************/
+
+$white: hsl(0, 0%, 100%)
+$light-gray: hsl(212, 45%, 89%)
+$grayish-blue: hsl(220, 15%, 55%)
+$dark-blue: hsl(218, 44%, 22%)
+
+/*****************************/
+/*        sizes              */
+/*****************************/
+
+$size-0-2: .75rem //12px
+$size-0-1: 15px   
+$size-0: 1rem   //16px
+$size-1: 1.5rem //24px
+$size-2: 2rem   //64px
+
+/*****************************/
+/*          general          */
+/*****************************/
+:root,body, #root
+  width: 100%
+  height: 100%
+  background: $light-gray
+
+h4
+  font-size: $size-1
+  font-weight: 700
+p
+  font-size: $size-0-1
+  font-weight: 400
+
+.app
+  display: flex
+  justify-content: center
+  align-items: center 
+  width: 100%
+  height: 100% 
+
+.card
+  background: $white
+  padding: $size-2
+  border-radius: $size-0
+  width: 344px
+  img
+    border-radius: $size-0
+    width: 100%
+    height: auto
+  .card-body
+    h4,p
+      margin: $size-0 0 0 0
+      text-align: center
+    h4
+      color:$dark-blue
+    p
+      color:$grayish-blue
+
+/*****************************/
+/*      media queries        */
+/*****************************/
+  
+@media (max-width:$mobile)
+  body
+    width: auto
+    height: auto
+  .card
+    margin: $size-0
+    padding: $size-2
+    border-radius: $size-0
+    width: auto
+  
+
+
+
